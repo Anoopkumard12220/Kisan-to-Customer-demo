@@ -155,7 +155,11 @@ body.no-shell #app{padding-bottom:0;}
 .auth-footer-note{margin-top:auto; padding-top:20px; text-align:center; font-size:12px; color:var(--gray-light);}
 
 /* ============ Home ============ */
-.home-header{padding:18px 18px 4px;}
+.home-header{
+  padding:18px 18px 14px;
+  position:sticky; top:0; z-index:30;
+  background:var(--bg);
+}
 .greet-row{display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;}
 .greet-left .eyebrow{font-size:12px; color:var(--gray); display:flex; align-items:center; gap:5px;}
 .greet-left h2{font-size:19px; margin-top:2px;}
@@ -171,6 +175,7 @@ body.no-shell #app{padding-bottom:0;}
 .search-bar .ico{opacity:.5;}
 
 .offer-banner{
+  display:block;
   background:linear-gradient(120deg, var(--green-dark), var(--green) 75%);
   border-radius:20px; padding:20px; color:#fff; position:relative; overflow:hidden; margin-bottom:22px;
 }
@@ -371,6 +376,7 @@ body.no-shell #app{padding-bottom:0;}
 .profile-head h2{font-size:19px;}
 .profile-head p{font-size:12.5px; opacity:.85; margin-top:3px;}
 .profile-list{margin:-28px 16px 20px; background:var(--surface); border-radius:18px; box-shadow:var(--shadow); overflow:hidden;}
+.profile-list + .profile-list{margin-top:16px;}
 .profile-row{display:flex; align-items:center; gap:14px; padding:16px 18px; border-bottom:1px solid var(--border);}
 .profile-row:last-child{border-bottom:none;}
 .profile-row .ico{width:38px; height:38px; border-radius:11px; background:var(--green-tint); display:flex; align-items:center; justify-content:center; font-size:17px;}
